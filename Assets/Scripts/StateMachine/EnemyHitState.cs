@@ -20,6 +20,6 @@ public class EnemyHitState: CharacterBaseState
 
     public override void OnCollisionExit2D(CharacterStateManager character, Collision2D collision)
     {
-        // Si el enemigo sale del rango => Walk
+        // Si el objetivo sale del rango => Walk
     }
 }

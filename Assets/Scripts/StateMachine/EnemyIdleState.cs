@@ -9,14 +9,12 @@ public class EnemyIdleState: CharacterBaseState
 
     public override void UpdateState(CharacterStateManager character) 
     {
-        // El personaje quedará en este estado mientras no se mueva ni interactúe ninguna otra instancia
-        // Si se mueve => Walk
-        // Si salta => Jump
+        // Si la distancia del objetivo es menor o igual al rango => Walk
     }
 
     public override void OnCollisionEnter2D(CharacterStateManager character, Collision2D collision)
     {
-        // Si colisiona con el enemigo entonces podrá atacar => Hit
+        // Si colisiona con el objetivo entonces podrá atacar => Hit
     }
 
     public override void OnCollisionExit2D(CharacterStateManager character, Collision2D collision)

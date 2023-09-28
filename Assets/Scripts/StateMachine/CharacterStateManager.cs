@@ -5,10 +5,10 @@ using UnityEngine;
 public class CharacterStateManager : MonoBehaviour
 {
     CharacterBaseState currentState;
-    public CharacterHitState CharacterHitState = new CharacterHitState();
-    public CharacterIdleState CharacterIdleState = new CharacterIdleState();
-    public CharacterWalkState CharacterWalkState = new CharacterWalkState();
-    public CharacterJumpState CharacterJumpState = new CharacterJumpState();
+    public EnemyHitState CharacterHitState = new EnemyHitState();
+    public EnemyIdleState CharacterIdleState = new EnemyIdleState();
+    public EnemyWalkState CharacterWalkState = new EnemyWalkState();
+    public EnemyJumpState CharacterJumpState = new EnemyJumpState();
 
     private void Start()
     {

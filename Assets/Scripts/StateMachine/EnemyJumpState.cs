@@ -5,17 +5,17 @@ public class EnemyJumpState: CharacterBaseState
     public override void EnterState(CharacterStateManager character)
     {
         // Animación de Salto
+        // Impulso hacia arriba (Rigidbody2D)
     }
 
     public override void UpdateState(CharacterStateManager character)
     {
-        // Si cae al suelo
-            // Si camina => Walk
-            // Si no camina => Idle
+        // Cae tras llegar a una altura alcanzada por el impulso inicial
     }
 
     public override void OnCollisionEnter2D(CharacterStateManager character, Collision2D collision)
     {
+        // Si colisiona con suelo => Walk
         // Si colisiona con enemigo => Hit
     }
 

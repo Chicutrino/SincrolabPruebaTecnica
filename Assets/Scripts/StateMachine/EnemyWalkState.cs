@@ -4,12 +4,12 @@ public class EnemyWalkState: CharacterBaseState
 {
     public override void EnterState(CharacterStateManager character) 
     {
-        // Enemigo comienza a caminar
+        // Enemigo comienza a caminar hacia el objetivo
     }
 
     public override void UpdateState(CharacterStateManager character) 
     {
-        // Caminamos hacia el objetivo
+        // Camina hacia el objetivo
     }
 
     public override void OnCollisionEnter2D(CharacterStateManager character, Collision2D collision)
