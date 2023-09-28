@@ -132,37 +132,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498286948}
-  - component: {fileID: 498286947}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &498286947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498286946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8240c6819979a44892e821ded44e85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  strength:
-    baseValue: 0
-  damage:
-    baseValue: 0
-  speed:
-    baseValue: 0
-  armor:
-    baseValue: 0
-  vision:
-    baseValue: 0
 --- !u!4 &498286948
 Transform:
   m_ObjectHideFlags: 0
