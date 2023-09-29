@@ -4,14 +4,16 @@ public class PlayerJumpState : PlayerBaseState
 {
     CharacterSheet playerCharacterSheet;
     Rigidbody2D playerRb;
+    int jumpForce = 100;
 
     public override void EnterState(PlayerStateManager character)
     {
         Debug.Log("Entrando en Player Jump");
         // Animación de Salto
         // Impulso hacia arriba (Rigidbody2D)
-        playerRb = character.GetComponent<Rigidbody2D>();
-        playerRb.AddForce(Vector2.up * playerCharacterSheet.Strength);
+        playerRb = character.gameObject.GetComponent<Rigidbody2D>();
+        playerCharacterSheet = character.GetComponent<CharacterController>().characterSheet;
+        playerRb.AddForce(Vector2.up * playerCharacterSheet.Strength * jumpForce);
     }
 
     public override void UpdateState(PlayerStateManager character)

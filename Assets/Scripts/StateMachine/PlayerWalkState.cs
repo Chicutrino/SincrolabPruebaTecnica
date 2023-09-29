@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerWalkState : PlayerBaseState
 {
-    int speed = 10;
+    int speed;
     int direction;
     CharacterSheet playerCharacterSheet;
     Rigidbody2D playerRb;
@@ -12,6 +12,7 @@ public class PlayerWalkState : PlayerBaseState
         Debug.Log("Entrando en Player Walk");
         // Comienza animación de caminar
         // Player comienza a caminar hacia el objetivo
+        speed = 10;
         var playerCharacterController = character.GetComponent<CharacterController>();
         playerCharacterSheet = playerCharacterController.characterSheet;
         playerRb = character.GetComponent<Rigidbody2D>();
@@ -26,7 +27,7 @@ public class PlayerWalkState : PlayerBaseState
             direction = -1;
         else if (Input.GetAxisRaw("Horizontal") == 0)
             character.PlayerIdleState.EnterState(character);
-        playerRb.MovePosition(character.transform.position + (character.transform.right * direction * playerCharacterSheet.Speed * speed * Time.deltaTime));
+        playerRb.MovePosition(character.transform.position + (Vector3.right * direction * playerCharacterSheet.Speed * speed * Time.deltaTime));
     }
 
     public override void OnCollisionEnter2D(PlayerStateManager character, Collision2D collision)

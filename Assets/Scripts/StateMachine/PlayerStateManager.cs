@@ -6,9 +6,6 @@ public class PlayerStateManager: MonoBehaviour
 {
     PlayerBaseState currentState;
     public PlayerIdleState PlayerIdleState = new PlayerIdleState();
-    public EnemyHitState EnemyHitState = new EnemyHitState();
-    public EnemyWalkState EnemyWalkState = new EnemyWalkState();
-    public EnemyJumpState EnemyJumpState = new EnemyJumpState();
     public PlayerHitState PlayerHitState = new PlayerHitState();
     public PlayerWalkState PlayerWalkState = new PlayerWalkState();
     public PlayerJumpState PlayerJumpState = new PlayerJumpState();

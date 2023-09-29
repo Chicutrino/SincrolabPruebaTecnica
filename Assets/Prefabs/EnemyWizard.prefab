@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4969267347695002027}
   - component: {fileID: 9099818978495374976}
   - component: {fileID: 1297076944717335753}
-  - component: {fileID: 6822905942295994045}
   - component: {fileID: 3585853303029387233}
+  - component: {fileID: 6445851376680319808}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Enemy
@@ -166,18 +166,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6822905942295994045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8327540578094342425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06d74ea98ee2724485e98710bad2a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &3585853303029387233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -213,3 +201,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6445851376680319808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8327540578094342425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6da3d0a64015074c91aa54338189e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

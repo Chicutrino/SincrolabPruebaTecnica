@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3659076243108649298}
   - component: {fileID: 4592409658501779839}
   - component: {fileID: 4173066430852280041}
-  - component: {fileID: 8715785020881080196}
   - component: {fileID: 2952687966619534367}
+  - component: {fileID: 4262972338215587656}
   m_Layer: 0
   m_Name: EnemyWarrior
   m_TagString: Enemy
@@ -166,18 +166,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &8715785020881080196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797753943575094534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06d74ea98ee2724485e98710bad2a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &2952687966619534367
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -213,3 +201,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4262972338215587656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797753943575094534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6da3d0a64015074c91aa54338189e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
