@@ -10,6 +10,7 @@ public class EnemyWalkState: EnemyBaseState
 
     public override void EnterState(EnemyStateManager character) 
     {
+        Debug.Log("Entrando en Enemy Walk");
         // Inicializamos variables
         enemyCharacterSheet = character.GetComponent<CharacterSheet>();
         enemyRb = character.GetComponent<Rigidbody2D>();

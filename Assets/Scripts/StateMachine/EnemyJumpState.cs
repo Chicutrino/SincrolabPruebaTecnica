@@ -9,6 +9,7 @@ public class EnemyJumpState: EnemyBaseState
     int sign;
     public override void EnterState(EnemyStateManager character)
     {
+        Debug.Log("Entrando en Enemy Jump");
         // Animación de Salto
         // Impulso hacia arriba (Rigidbody2D)
         enemyCharacterSheet = character.GetComponent<CharacterSheet>();

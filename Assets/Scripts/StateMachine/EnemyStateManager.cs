@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyStateManager : MonoBehaviour
 {
     EnemyBaseState currentState;
-    public EnemyIdleState EnemyIdleState = new EnemyIdleState();
     public EnemyHitState EnemyHitState = new EnemyHitState();
     public EnemyWalkState EnemyWalkState = new EnemyWalkState();
     public EnemyJumpState EnemyJumpState = new EnemyJumpState();
 
     private void Start()
     {
-        currentState = EnemyIdleState;
+        // El enemigo no tiene Idle, empieza directamente caminando hacia el player
+        currentState = EnemyWalkState;
 
         currentState.EnterState(this);
     }

@@ -9,6 +9,7 @@ public class EnemyHitState : EnemyBaseState
 
     public override void EnterState(EnemyStateManager character)
     {
+        Debug.Log("Entrando en Enemy Hit");
         // Animación de golpear
         // Hace daño al objetivo        
         player = GameObject.FindGameObjectWithTag("Player");

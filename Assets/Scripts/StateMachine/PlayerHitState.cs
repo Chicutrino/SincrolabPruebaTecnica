@@ -6,6 +6,7 @@ public class PlayerHitState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager character)
     {
+        Debug.Log("Entrando en Player Hit");
         // Activa animación de preparación para el golpe
     }
 

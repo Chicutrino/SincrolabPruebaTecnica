@@ -7,6 +7,7 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager character)
     {
+        Debug.Log("Entrando en Player Jump");
         // Animación de Salto
         // Impulso hacia arriba (Rigidbody2D)
         playerRb = character.GetComponent<Rigidbody2D>();
