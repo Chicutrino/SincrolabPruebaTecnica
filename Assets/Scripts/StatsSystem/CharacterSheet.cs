@@ -8,9 +8,8 @@ public class CharacterSheet : ScriptableObject
     public CharacterClass characterClass;
     public Stats characterBaseStats;
     public int Strength;
-    public int Damage;
     public int Speed;
-    public int Vision;
     public int Range;
     public int Health;
+    public Sprite CharacterSprite;
 }

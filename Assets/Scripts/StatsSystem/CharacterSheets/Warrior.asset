@@ -14,15 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterClass: 1
   characterBaseStats:
-    Strength: 8
-    Damage: 2
-    Speed: 10
-    Vision: 10
-    Range: 10
+    Strength: 2
+    Speed: 2
+    Range: 2
     Health: 100
-  Strength: 10
-  Damage: 2
-  Speed: 8
-  Vision: 10
-  Range: 10
+  Strength: 4
+  Speed: 0
+  Range: 2
   Health: 100
+  CharacterSprite: {fileID: 7482667652216324306, guid: 4406d3d5c2116d447b31700204ff0969, type: 3}

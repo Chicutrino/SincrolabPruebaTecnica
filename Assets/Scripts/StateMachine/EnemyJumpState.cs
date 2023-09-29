@@ -1,25 +1,37 @@
 using UnityEngine;
 
-public class EnemyJumpState: CharacterBaseState
+public class EnemyJumpState: EnemyBaseState
 {
-    public override void EnterState(CharacterStateManager character)
+    CharacterSheet enemyCharacterSheet;
+    Rigidbody2D enemyRb;
+    Transform playerTransform;
+    float distance;
+    int sign;
+    public override void EnterState(EnemyStateManager character)
     {
         // Animación de Salto
         // Impulso hacia arriba (Rigidbody2D)
+        enemyCharacterSheet = character.GetComponent<CharacterSheet>();
+        enemyRb = character.GetComponent<Rigidbody2D>();
+        enemyRb.AddForce(Vector2.up * enemyCharacterSheet.Strength);
     }
 
-    public override void UpdateState(CharacterStateManager character)
+    public override void UpdateState(EnemyStateManager character)
     {
-        // Cae tras llegar a una altura alcanzada por el impulso inicial
+        // Animación de caída tras alcanzar una altura máxima
     }
 
-    public override void OnCollisionEnter2D(CharacterStateManager character, Collision2D collision)
+    public override void OnCollisionEnter2D(EnemyStateManager character, Collision2D collision)
     {
         // Si colisiona con suelo => Walk
-        // Si colisiona con enemigo => Hit
+        if (collision.gameObject.tag == "Ground")
+            character.EnemyWalkState.EnterState(character);
+        // Si colisiona con player => Hit
+        if (collision.gameObject.tag == "Player")
+            character.EnemyHitState.EnterState(character);
     }
 
-    public override void OnCollisionExit2D(CharacterStateManager character, Collision2D collision)
+    public override void OnCollisionExit2D(EnemyStateManager character, Collision2D collision)
     {
 
     }

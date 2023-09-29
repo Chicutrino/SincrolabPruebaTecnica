@@ -10,34 +10,35 @@ public class CharacterSheetEditor : Editor
 
         CharacterSheet characterSheet = (CharacterSheet)target;
 
+        int strengthMod = 0;
+        int speedMod = 0;
+        int rangeMod = 0;
+        int healthMod = 0;
+
         switch (characterSheet.characterClass)
         {
             case CharacterClass.Archer:
-                characterSheet.Strength = int.Parse(characterSheet.characterBaseStats.Strength.ToString()) - 2;
-                characterSheet.Damage = int.Parse(characterSheet.characterBaseStats.Damage.ToString());
-                characterSheet.Speed = int.Parse(characterSheet.characterBaseStats.Speed.ToString());
-                characterSheet.Vision = int.Parse(characterSheet.characterBaseStats.Vision.ToString());
-                characterSheet.Range = int.Parse(characterSheet.characterBaseStats.Range.ToString()) + 2;
-                characterSheet.Health = int.Parse(characterSheet.characterBaseStats.Health.ToString());
+                strengthMod = -2;
+                rangeMod = 2;
+                characterSheet.CharacterSprite = Resources.Load<Sprite>("ArcherSprite");
                 break;
             case CharacterClass.Warrior:
-                characterSheet.Strength = int.Parse(characterSheet.characterBaseStats.Strength.ToString()) + 2;
-                characterSheet.Damage = int.Parse(characterSheet.characterBaseStats.Damage.ToString());
-                characterSheet.Speed = int.Parse(characterSheet.characterBaseStats.Speed.ToString()) - 2;
-                characterSheet.Vision = int.Parse(characterSheet.characterBaseStats.Vision.ToString());
-                characterSheet.Range = int.Parse(characterSheet.characterBaseStats.Range.ToString());
-                characterSheet.Health = int.Parse(characterSheet.characterBaseStats.Health.ToString());
+                strengthMod = 2;
+                speedMod = -2;
+                characterSheet.CharacterSprite = Resources.Load<Sprite>("WarriorSprite");
                 break;
             case CharacterClass.Wizard:
-                characterSheet.Strength = int.Parse(characterSheet.characterBaseStats.Strength.ToString());
-                characterSheet.Damage = int.Parse(characterSheet.characterBaseStats.Damage.ToString()) - 2;
-                characterSheet.Speed = int.Parse(characterSheet.characterBaseStats.Speed.ToString());
-                characterSheet.Vision = int.Parse(characterSheet.characterBaseStats.Vision.ToString()) + 2;
-                characterSheet.Range = int.Parse(characterSheet.characterBaseStats.Range.ToString());
-                characterSheet.Health = int.Parse(characterSheet.characterBaseStats.Health.ToString());
+                strengthMod = -2;
+                speedMod = 2;
+                characterSheet.CharacterSprite = Resources.Load<Sprite>("WizardSprite");
                 break;
             default:
                 break;
         }
+
+        characterSheet.Strength = int.Parse(characterSheet.characterBaseStats.Strength.ToString()) + strengthMod;
+        characterSheet.Speed = int.Parse(characterSheet.characterBaseStats.Speed.ToString()) + speedMod;
+        characterSheet.Range = int.Parse(characterSheet.characterBaseStats.Range.ToString()) + rangeMod;
+        characterSheet.Health = int.Parse(characterSheet.characterBaseStats.Health.ToString()) + healthMod;
     }
 }

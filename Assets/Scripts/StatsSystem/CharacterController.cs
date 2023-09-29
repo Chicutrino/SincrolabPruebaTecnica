@@ -4,30 +4,37 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public CharacterSheet characterSheet;
+
     public int maxHealth;
     public int currentHealth { get; private set; }
 
-    [SerializeField] private CharacterSheet characterSheet;
+    [SerializeField] private CircleCollider2D collider;
 
     private void Awake()
     {
-        maxHealth = int.Parse(characterSheet.Health.ToString());
+        maxHealth = characterSheet.Health;
         currentHealth = maxHealth;
+        GetComponent<SpriteRenderer>().sprite = characterSheet.CharacterSprite;
+        collider.radius = characterSheet.Range;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(int.Parse(characterSheet.Damage.ToString()), int.Parse(characterSheet.Strength.ToString()));
+            TakeDamage(characterSheet.Strength);
         }
     }
 
-    public void TakeDamage(int damage, int strength)
+    public void TakeDamage(int strength)
     {
-        var totalDamage = damage + strength;
-        currentHealth -= totalDamage;
-        Debug.Log(transform.name + " takes " + totalDamage + " damage.");
+        var damage = strength;
+        if (damage <= 0)
+            damage = 1;
+
+        currentHealth -= damage;
+        Debug.Log(transform.name + " takes " + damage + " damage.");
 
         if (currentHealth <= 0)
         {
